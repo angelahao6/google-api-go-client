@@ -2,6 +2,8 @@ module google.golang.org/api
 
 go 1.19
 
+replace github.com/googleapis/enterprise-certificate-proxy => ../enterprise-certificate-proxy
+
 require (
 	cloud.google.com/go/compute/metadata v0.2.3
 	github.com/google/go-cmp v0.5.9

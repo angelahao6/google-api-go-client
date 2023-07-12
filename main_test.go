@@ -54,6 +54,10 @@ func TestGoExample(t *testing.T) {
 
 }
 
-func TestDarwin(t *testing.T) {
-	darwin.TestHi()
+func TestPublic(t *testing.T) {
+	secureKey, err := darwin.NewSecureKey("Google Endpoint Verification")
+	if err != nil {
+		fmt.Println("Error in getting private key pair")
+	}
+	secureKey.Public()
 }

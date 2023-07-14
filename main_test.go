@@ -54,10 +54,20 @@ func TestGoExample(t *testing.T) {
 
 }
 
-func TestPublic(t *testing.T) {
+func TestPublicInClient(t *testing.T) {
 	secureKey, err := darwin.NewSecureKey("Google Endpoint Verification")
 	if err != nil {
 		fmt.Println("Error in getting private key pair")
 	}
-	secureKey.Public()
+	fmt.Println(secureKey.Public())
 }
+
+// func TestPublicInKeychain(t *testing.T) {
+// 	keyPointer, err := keychain.Cred("Google Endpoint Verification")
+// 	if err != nil {
+// 		t.Errorf("Cred error: %q", err)
+// 		return
+// 	}
+// 	fmt.Println(keyPointer.Public())
+
+// }
